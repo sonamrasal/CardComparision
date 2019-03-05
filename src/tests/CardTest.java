@@ -34,6 +34,7 @@ public class CardTest {
 		Card kingOfClubs = new Card(Rank.KING, Suite.CLUB);
 		Card anotherKingOfClubs = new Card(Rank.KING, Suite.CLUB);
 		assertEquals(0, kingOfClubs.compareTo(anotherKingOfClubs));
+		assertEquals(kingOfClubs, anotherKingOfClubs);
 	}
 
 	@Test
