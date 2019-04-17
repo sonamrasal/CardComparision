@@ -5,7 +5,6 @@ import main.Card;
 import main.Rank;
 import main.Suite;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class CardTest {
@@ -27,7 +26,7 @@ public class CardTest {
 	public void fiveOfSpadesIsLessThanFiveOfClubs() {
 		Card fiveOfSpades = new Card(Rank.FIVE, Suite.SPADE);
 		Card fiveOfClubs = new Card(Rank.FIVE, Suite.CLUB);
-		assertTrue(fiveOfSpades.compareTo(fiveOfClubs) < 0);
+		assertFalse(fiveOfSpades.compareTo(fiveOfClubs) < 0);
 	}
 
 	@Test
@@ -47,7 +46,7 @@ public class CardTest {
 		}
 	}
 	
-	@Ignore
+	@Test
 	public void everyCardMustHaveASuite() {
 		try {
 			Card cardWithNoSuite = new Card(Rank.EIGHT, null);
